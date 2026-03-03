@@ -1,11 +1,26 @@
 import { Suspense, useEffect, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+import { OrbitControls, Preload, useGLTF, useProgress } from '@react-three/drei';
 
 import CanvasLoader from '../Loader';
 
+// Stable path: public folder is served at root in Vite
+const MODEL_URL = '/sci-fi/scene.gltf';
+
+// Kick off load as soon as Canvas mounts (no module-level preload to avoid early crash)
+function PreloadModel() {
+  useGLTF.preload(MODEL_URL);
+  return null;
+}
+
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF('./sci-fi/scene.gltf');
+  const computer = useGLTF(MODEL_URL);
+  const { active } = useProgress();
+
+  // Wait for all resources (including blob textures) so layout doesn’t race
+  if (active) {
+    return <CanvasLoader />;
+  }
 
   return (
     <mesh>
@@ -58,6 +73,7 @@ const ComputersCanvas = () => {
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true, alpha: true }}
     >
+      <PreloadModel />
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}

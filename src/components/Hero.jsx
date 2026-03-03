@@ -1,10 +1,19 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 import { styles } from '../styles';
 import { ComputersCanvas } from './canvas';
+import { ErrorBoundary } from './ErrorBoundary';
 import resume from '../assets/pdf/resume.pdf';
 
 const Hero = () => {
+  // Defer canvas mount so Hero content renders first; avoids crash before loader appears
+  const [showCanvas, setShowCanvas] = useState(false);
+  useEffect(() => {
+    const id = requestAnimationFrame(() => setShowCanvas(true));
+    return () => cancelAnimationFrame(id);
+  }, []);
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -23,7 +32,9 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas />
+      <ErrorBoundary>
+        {showCanvas && <ComputersCanvas />}
+      </ErrorBoundary>
       <div className="absolute xs:bottom-80 bottom-96 w-full flex justify-end p-2 items-center ">
         <a
           href={resume}

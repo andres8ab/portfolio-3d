@@ -137,6 +137,18 @@ const experiences = [
     ],
   },
   {
+    title: "Freelance Full Stack Developer",
+    company_name: "Todo Electrico Victor",
+    icon: victor,
+    iconBg: "#383E56",
+    date: "2026",
+    points: [
+      "Rebuilt the original website as a full ecommerce platform for product catalog, cart, and checkout.",
+      "Implemented the frontend and architecture using Next.js, Tailwind CSS, Zustand, and PrimeReact.",
+      "Integrated Drizzle ORM, Wompi payment gateway, SEO optimization, and Meta Pixel tracking.",
+    ],
+  },
+  {
     title: "Full stack Developer",
     company_name: "Comercializadora OB",
     icon: ob,
@@ -364,24 +376,40 @@ const projects = [
   {
     name: "Retail Store",
     description:
-      "Descriptive website with social media links and sales location of the company with optional deals they want to show. Designed with a fun style that distinguishes the company theme in the market.",
+      "Full ecommerce platform built with Next.js, Tailwind CSS, Zustand, Drizzle ORM, and PrimeReact, including Wompi payment integration, SEO optimization, and Meta Pixel tracking for marketing analytics.",
     tags: [
       {
-        name: "html5",
+        name: "Next.js",
         color: "blue-text-gradient",
       },
       {
-        name: "css3",
+        name: "Tailwind",
         color: "orange-text-gradient",
       },
       {
-        name: "javascript",
+        name: "Zustand",
         color: "pink-text-gradient",
+      },
+      {
+        name: "Drizzle",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "PrimeReact",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Wompi",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Meta Pixel",
+        color: "orange-text-gradient",
       },
     ],
     image: almacenvictor,
-    source_code_link: "https://github.com/andres8ab/Victor",
-    source_link: "https://todoelectricovictor.netlify.app/",
+    source_code_link: "https://github.com/andres8ab/victor-store",
+    source_link: "https://todoelectricovictor.com/",
   },
   {
     name: "AI Summarizer",

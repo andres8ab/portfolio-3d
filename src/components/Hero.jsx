@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-import { styles } from '../styles';
-import { ComputersCanvas } from './canvas';
-import { ErrorBoundary } from './ErrorBoundary';
-import resume from '../assets/pdf/resume.pdf';
+import { styles } from "../styles";
+import { ComputersCanvas } from "./canvas";
+import { ErrorBoundary } from "./ErrorBoundary";
+import resume from "../assets/pdf/resume.pdf";
 
 const Hero = () => {
   // Defer canvas mount so Hero content renders first; avoids crash before loader appears
@@ -26,15 +26,13 @@ const Hero = () => {
         <div>
           <h1 className={`${styles.heroHeadText}`}>Hi, I&apos;m Andres</h1>
           <p className={`${styles.heroSubText} mt-2 text-[#00cea8]`}>
-            I develop full stack web applications using{' '}
+            I develop full stack web applications using{" "}
             <br className="sm:block hidden" />
             react frameworks
           </p>
         </div>
       </div>
-      <ErrorBoundary>
-        {showCanvas && <ComputersCanvas />}
-      </ErrorBoundary>
+      <ErrorBoundary>{showCanvas && <ComputersCanvas />}</ErrorBoundary>
       <div className="absolute xs:bottom-80 bottom-96 w-full flex justify-end p-2 items-center ">
         <a
           href={resume}
@@ -54,7 +52,7 @@ const Hero = () => {
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                repeatType: 'loop',
+                repeatType: "loop",
               }}
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />

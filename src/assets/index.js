@@ -32,6 +32,7 @@ import evolutecc from "./company/evolutecc.png";
 import alfred from "./company/alfred.png";
 
 import almacenvictor from "./almacenvictor.png";
+import cartera from "./cartera.png";
 import comercialob from "./comercialob.png";
 import resumy from "./resumy.png";
 import fanatik from "./fanatik.png";
@@ -81,4 +82,5 @@ export {
   comercialob,
   uflou,
   resumy,
+  cartera,
 };

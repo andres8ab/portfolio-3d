@@ -20,6 +20,7 @@ import {
   yasmin,
   luis,
   almacenvictor,
+  cartera,
   comercialob,
   resumy,
   fanatik,
@@ -410,6 +411,28 @@ const projects = [
     image: almacenvictor,
     source_code_link: "https://github.com/andres8ab/victor-store",
     source_link: "https://todoelectricovictor.com/",
+  },
+  {
+    name: "Collection App",
+    description:
+      "Billing organization tool built with TanStack Start, Prisma, Tailwind, and Lucide React. Includes Cartera with searchable invoice creation and filters, Liquidaciones by seller with monthly commissions and invoice removal, and Reportes for account statements by client and date range.",
+    tags: [
+      {
+        name: "TanStack Start",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Prisma",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Lucide React",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: cartera,
+    source_code_link: "https://github.com/andres8ab/collection-app",
+    source_link: "https://collection-app-bice.vercel.app/",
   },
   {
     name: "AI Summarizer",

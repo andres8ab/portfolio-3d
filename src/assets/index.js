@@ -41,6 +41,10 @@ import litsight from "./litsight.png";
 import hombit from "./hombit.png";
 import wurth from "./wurth.png";
 import doxa from "./doxa.png";
+import b2b from "./b2b.jpeg";
+import b2c from "./b2c.jpeg";
+import shops from "./shops.jpeg";
+
 
 export {
   logo,
@@ -83,4 +87,7 @@ export {
   uflou,
   resumy,
   cartera,
+  b2b,
+  b2c,
+  shops,
 };

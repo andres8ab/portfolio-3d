@@ -33,6 +33,9 @@ import {
   flutter,
   alfred,
   creator,
+  b2b,
+  b2c,
+  shops,
 } from "../assets";
 
 export const navLinks = [
@@ -219,6 +222,81 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "Fleet Management App",
+    description:
+      "A B2B monorepo containing two platforms—a fleet management app and an internal support tool for Alfred's operations team, optimized with Next.js, Tailwind CSS, HeroUI, and Zustand.",
+    tags: [
+      {
+        name: "Next.js",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwind",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "HeroUI",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Zustand",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: b2b,
+    source_code_link: "https://github.com/alfred-com-co/alfred-web",
+    source_link: "https://empresas.alfred.co",
+  },
+  {
+    name: "Shop Allies App",
+    description:
+      "A web application built and maintained for Alfred's partner shops, enabling streamlined workflows and merchant management using React, CSS, and Redux.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Redux",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: shops,
+    source_code_link: "https://github.com/alfred-com-co/alfred-b2b-app",
+    source_link: "https://b2b.alfred.co/login",
+  },
+  {
+    name: "Customers App",
+    description:
+      "A B2C mobile application for end customers of Alfred for both Android and iOS, built and maintained using Flutter to deliver a cross-platform user experience.",
+    tags: [
+      {
+        name: "Flutter",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Dart",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Bloc",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: b2c,
+    source_code_link: "https://github.com/alfred-com-co/alfred-b2c-mobile",
+    source_link: "https://alfred.co",
+  },
+
   {
     name: "Wurth",
     description:
